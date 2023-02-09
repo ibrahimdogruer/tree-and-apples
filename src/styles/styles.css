@@ -1,0 +1,80 @@
+.app {
+    background-color: #ccc;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.basket {
+    position: absolute;
+    right: -50px;
+    bottom: -30px
+}
+
+.apple {
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    z-index: 1
+}
+
+
+.shake {
+    animation: shake 3s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(3px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-6px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(6px, 0, 0);
+    }
+}
+
+.drop {
+    animation: drop 1.5s forwards;
+}
+
+@keyframes drop {
+    0% {
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    20% {
+        transform:
+            translate3d(0, 20px, 0) rotate3d(0, 0, 1, -10deg);
+        opacity: 1;
+    }
+
+    40%,
+    45% {
+        transform:
+            translate3d(0, -20px, 0) rotate3d(0, 0, 1, 10deg);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translate3d(0, 430px, 0) rotate3d(0, 0, 0, 0deg);
+    }
+}
