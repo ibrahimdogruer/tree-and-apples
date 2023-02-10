@@ -1,6 +1,6 @@
 import "./styles/styles.css";
 
-import Apple from "./components/Apple";
+import Apples from "./components/Apples";
 import Basket from "./components/Basket";
 import Tree from "./components/Tree";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,7 +20,7 @@ function App() {
 
         <div className="d-flex align-items-end position-relative">
           <Tree width={300} />
-          <Apple />
+          <Apples />
           <Basket width={150} />
         </div>
 

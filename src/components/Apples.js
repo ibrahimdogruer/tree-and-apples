@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { AppleSvg } from "./svgs/index.js";
 
-const Apple = ({ width = 40, height = 42 }) => {
+const Apples = ({ width = 40, height = 42 }) => {
   const { dropping, shaking, selectedApple, applesOnTheTree } = useSelector(
     (state) => state.basket
   );
@@ -35,4 +35,4 @@ const Apple = ({ width = 40, height = 42 }) => {
   );
 };
 
-export default Apple;
+export default Apples;
