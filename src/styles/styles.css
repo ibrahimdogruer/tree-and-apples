@@ -6,17 +6,30 @@
 
 .basket {
     position: absolute;
-    right: -50px;
+    right: -150px;
     bottom: -30px
 }
 
-.apple {
-    position: absolute;
-    right: 30px;
-    top: 70px;
-    z-index: 1
+.apple-on-tree {
+    width: 50px;
+    height: 42px;
 }
 
+.apples-on-tree {
+    position: absolute;
+    /* right: 30px; */
+    top: 40px;
+    left: 50px;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+}
+
+.apples-in-basket {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+}
 
 .shake {
     animation: shake 3s cubic-bezier(.36, .07, .19, .97) both infinite;
@@ -53,7 +66,7 @@
     animation: drop 1.5s forwards;
 }
 
-@keyframes drop {
+/* @keyframes drop {
     0% {
         transform-origin: center;
         opacity: 1;
@@ -75,6 +88,6 @@
     to {
         opacity: 1;
         transform:
-            translate3d(0, 430px, 0) rotate3d(0, 0, 0, 0deg);
+            translate3d(0, 510px, 0) rotate3d(0, 0, 0, 0deg);
     }
-}
+} */

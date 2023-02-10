@@ -4,10 +4,10 @@ import Apple from "./components/Apple";
 import Basket from "./components/Basket";
 import Tree from "./components/Tree";
 import { useSelector, useDispatch } from "react-redux";
-import { emptyBasket } from "./stores/basket";
+import { reset } from "./stores/basket";
 
 function App() {
-  const { appleCount } = useSelector((state) => state.basket);
+  const { applesOnTheTree } = useSelector((state) => state.basket);
   const dispatch = useDispatch();
 
   return (
@@ -20,15 +20,17 @@ function App() {
 
         <div className="d-flex align-items-end position-relative">
           <Tree width={300} />
-          <Apple width={40} />
+          <Apple />
           <Basket width={150} />
         </div>
 
         <div className="mt-5 text-center">
-          <h6>Apples: {appleCount}</h6>
-
-          <button className="btn btn-outline-danger" onClick={() => dispatch(emptyBasket())}>
-            Empty the Basket
+          <h6 className="text-center">Apples: {applesOnTheTree}</h6>
+          <button
+            className="btn btn-outline-danger"
+            onClick={() => dispatch(reset())}
+          >
+            Reset
           </button>
         </div>
       </div>
